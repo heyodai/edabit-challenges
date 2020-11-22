@@ -25,6 +25,6 @@ def fizz_buzz(num):
     elif (is_buzz):
         return "Buzz"
     else:
-        return str(num) # convert into to string
+        return str(num) # convert into string
 
 main() # start main program
