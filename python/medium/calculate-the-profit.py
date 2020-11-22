@@ -5,21 +5,31 @@
 
 def main():
     # test the profit() function
-    print(profit({
+    
+    output = profit({
         "cost_price": 32.67,
         "sell_price": 45.00,
         "inventory": 1200
-    })) # Expected output: 14796
-    print(profit({
+    }) # Expected output: 14796
+    formatted_output = "{:.0f}".format(output)
+    print(formatted_output)
+
+    output = profit({
         "cost_price": 225.89,
         "sell_price": 550.00,
         "inventory": 100
-    })) # Expected output: 32411
-    print(profit({
+    }) # Expected output: 32411
+    formatted_output = "{:.0f}".format(output)
+    print(formatted_output)
+
+    output = profit({
         "cost_price": 2.77,
         "sell_price": 7.95,
         "inventory": 8500
-    })) # Expected output: 44030
+    }) # Expected output: 44030
+    formatted_output = "{:.0f}".format(output)
+    print(formatted_output)
+
     return
 
 def profit(info):
