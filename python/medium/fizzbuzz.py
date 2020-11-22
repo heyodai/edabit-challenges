@@ -11,7 +11,16 @@ def main():
     fizz_buzz(4) # "4"
 
 def fizz_buzz(num):
-    for i in range(1, num + 1):
-        print(i)
+    # set up some variables
+    FIZZ_MULTIPLE = 3
+    BUZZ_MULTIPLE = 5
+    # is_fizz = true if (num % FIZZ_MULTIPLE == 0)
 
-main()
+    if (num % FIZZ_MULTIPLE == 0):
+        print("Fizz")
+    elif (num % BUZZ_MULTIPLE == 0):
+        print("Buzz")
+    else:
+        print(num)
+
+main() # start main program
