@@ -5,22 +5,26 @@
 
 def main():
     # test the output
-    fizz_buzz(3) # "Fizz"
-    fizz_buzz(5) # "Buzz"
-    fizz_buzz(15) # "FizzBuzz"
-    fizz_buzz(4) # "4"
+    print(fizz_buzz(3))  # "Fizz"
+    print(fizz_buzz(5))  # "Buzz"
+    print(fizz_buzz(15)) # "FizzBuzz"
+    print(fizz_buzz(4))  # "4"
 
 def fizz_buzz(num):
     # set up some variables
     FIZZ_MULTIPLE = 3
     BUZZ_MULTIPLE = 5
-    # is_fizz = true if (num % FIZZ_MULTIPLE == 0)
+    is_fizz = True if (num % FIZZ_MULTIPLE == 0) else False
+    is_buzz = True if (num % BUZZ_MULTIPLE == 0) else False
 
-    if (num % FIZZ_MULTIPLE == 0):
-        print("Fizz")
-    elif (num % BUZZ_MULTIPLE == 0):
-        print("Buzz")
+    # determine output
+    if (is_fizz and is_buzz):
+        return "FizzBuzz"
+    elif (is_fizz):
+        return "Fizz"
+    elif (is_buzz):
+        return "Buzz"
     else:
-        print(num)
+        return str(num) # convert into to string
 
 main() # start main program
