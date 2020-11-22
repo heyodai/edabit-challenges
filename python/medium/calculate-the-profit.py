@@ -25,6 +25,7 @@ def main():
 def profit(info):
     unit_profit = info["sell_price"] - info["cost_price"]
     total_sales = unit_profit * info["inventory"]
-    return "{:.0f}".format(total_sales) # format to remove decimal places
+    formatted_output = "{:.0f}".format(total_sales) # format to remove decimal places
+    return int(formatted_output) # convert from string to int
 
 main()
