@@ -23,6 +23,8 @@ def main():
     return
 
 def profit(info):
-    return (info["sell_price"] - info["cost_price"]) * info["inventory"]
+    unit_profit = info["sell_price"] - info["cost_price"]
+    total_sales = unit_profit * info["inventory"]
+    return total_sales
 
 main()
